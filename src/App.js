@@ -46,10 +46,15 @@ function App() {
         setSearch(e.target.value)
     }
 
+    const handleCloseCard = () => {
+        setCity(null)
+        setHasSearchedCity(false)
+    }
+
     return (
         <div className="wrapper">
             <Header hasSearchedCity={hasSearchedCity} />
-            {city && <Card city={city} />}
+            {city && <Card city={city} close={handleCloseCard} />}
             <Input
                 value={search}
                 onChange={handleInputChange}

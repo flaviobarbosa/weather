@@ -1,11 +1,12 @@
-import { useEffect } from 'react'
 import { Divider } from '../Divider'
 import './style.css'
 
-export const Card = ({ city }) => {
+export const Card = ({ city, close }) => {
     return (
         <section className="card__wrapper">
-            <span class="material-icons icon icon__close">close</span>
+            <span class="material-icons icon icon__close" onClick={close}>
+                close
+            </span>
             <span className="card__header">
                 {city.name} - {city.sys.country}
             </span>

@@ -104,7 +104,7 @@ export const capitals = [
 		"name": "Palmas"
 	},
 	{
-		"id": 3451189,
+		"id": 3451190,
 		"name": "Rio de Janeiro"
 	}
 ];

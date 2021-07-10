@@ -29,6 +29,10 @@
     margin-bottom: 1rem;
 }
 
+.card__current-description {
+    text-transform: capitalize;
+}
+
 .card__info {
     display: flex;
     align-items: center;

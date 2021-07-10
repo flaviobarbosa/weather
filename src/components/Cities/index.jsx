@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import './style.css'
 
 export const Cities = ({ cities }) => {
-    useEffect(() => console.log(cities), [])
     return (
         <div className="cities__wrapper">
             <h3 className="cities__header">Capitais</h3>

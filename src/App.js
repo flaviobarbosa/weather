@@ -1,14 +1,17 @@
 import { useEffect, useState } from 'react'
-import './App.css'
-
-import api from './api'
 import { capitals } from './utils/capitals'
 import { Divider, Header, Card } from './components'
 import { Input } from './components/Input'
 import { Cities } from './components/Cities'
 
+import api from './api'
+import './App.css'
+
 function App() {
     const [cities, setCities] = useState([])
+    const [search, setSearch] = useState('')
+    const [city, setCity] = useState(null)
+    const [hasSearchedCity, setHasSearchedCity] = useState(false)
 
     useEffect(() => {
         const fetchCapitalsInfo = async () => {
@@ -27,26 +30,33 @@ function App() {
         fetchCapitalsInfo()
     }, [])
 
+    const handleCitySearch = async (e) => {
+        e.preventDefault()
+
+        const response = await api.get(
+            `data/2.5/weather?appid=${process.env.REACT_APP_OPENWEATHER_KEY}&units=metric&lang=pt_br&q=${search}`
+        )
+
+        setCity(response.data)
+        setHasSearchedCity(true)
+        setSearch('')
+    }
+
+    const handleInputChange = (e) => {
+        setSearch(e.target.value)
+    }
+
     return (
         <div className="wrapper">
-            <Header searchedCity />
-            <Card />
-            <Input />
+            <Header hasSearchedCity={hasSearchedCity} />
+            {city && <Card city={city} />}
+            <Input
+                value={search}
+                onChange={handleInputChange}
+                handleSubmit={handleCitySearch}
+            />
             {cities.length > 0 && <Divider />}
             <Cities cities={cities} />
-            {/* <section
-                style={{
-                    minHeight: '100vh',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '0.5rem',
-                }}
-            >
-                {cities.length > 0 &&
-                    cities.map((city) => (
-                        <span key={city.name}>{city.name}</span>
-                    ))}
-            </section> */}
         </div>
     )
 }

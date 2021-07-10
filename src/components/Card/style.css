@@ -1,0 +1,99 @@
+.card__wrapper {
+    background-color: #fff2e4;
+    min-height: 5rem;
+    position: relative;
+    color: #505050;
+    padding: 1rem 2rem;
+}
+
+.icon {
+    color: #ff7f00;
+    font-weight: 500;
+}
+
+.icon__close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 2rem;
+}
+
+.card__header {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.card__current-weather {
+    font-size: 2.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.card__info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    font-size: 1.2rem;
+}
+
+.card__row-title {
+    margin-right: 0.25rem;
+}
+
+.card__row-value {
+    font-weight: 500;
+}
+
+.card__row-one,
+.card__row-two {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.card__row-one {
+    margin-bottom: 1.5rem;
+}
+
+.card__row-two {
+    margin-bottom: 1rem;
+    padding-left: 0.25rem;
+}
+
+.card_row-min {
+    margin-right: 0.5rem;
+}
+
+.card__divider {
+    margin: 0 -2rem;
+}
+
+.card__forecast {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card__forecast-box {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 0 0.5rem;
+}
+
+.card__forecast-title,
+.card__forecast-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.card__forecast-value {
+    color: #ff7f00;
+    font-size: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 0.5rem;
+}

@@ -1,0 +1,35 @@
+.cities__wrapper {
+    margin: 2rem;
+}
+
+.cities__wrapper {
+    color: white;
+}
+
+.cities__header {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.cities__info {
+    font-size: 1rem;
+    color: black;
+}
+
+.cities__info-title span {
+    font-size: 0.8rem;
+}
+
+.cities__info-row span {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.cities__info-row {
+    margin-top: 1rem;
+}
+
+.cities__info-minmax {
+    display: inline-block;
+    width: 2.5rem;
+}

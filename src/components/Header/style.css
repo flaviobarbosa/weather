@@ -1,0 +1,20 @@
+.title__big,
+.title__small {
+    color: white;
+}
+
+.title__big {
+    font-size: 3rem;
+    margin: 2rem;
+    width: 65%;
+}
+
+.title__small {
+    font-size: 1.75rem;
+    margin: 1.5rem;
+}
+
+.header__small {
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
